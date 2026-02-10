@@ -61,7 +61,7 @@ function Navbars() {
                       bottom: '-5px',
                       left: '0',
                       width: '100%',
-                      maxWidth: '40px',
+                      maxWidth: '41px',
                       height: '3px',
                       backgroundColor: '#ffd700',
                       borderRadius: '2px',
