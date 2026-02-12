@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap-icons/font/bootstrap-icons.css"; // make sure this is installed
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const WhatsappButton = () => {
   const whatsappNumber = "+2348033048836";
