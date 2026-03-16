@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.nav-item-custom:hover {
+  color: #f0e68c !important;
+  transition: color 0.3s ease;
+}

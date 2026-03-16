@@ -1,7 +1,7 @@
 import { Container, Carousel, Row, Col, Card } from 'react-bootstrap'
 import { Fade, Slide } from 'react-awesome-reveal'
-import Hero1 from '../assets/Hero1.jpg'
-import Hero2 from '../assets/Hero2.jpg'
+import Hero1 from '../assets/Hero1.jpg';
+import Hero2 from '../assets/Hero2.jpg';
 
 const Home = () => {
   const services = [
