@@ -67,7 +67,7 @@ const About = () => {
         {/* Overlay Text */}
         <Container className="position-relative text-center">
           <h1 style={{ fontSize: '3rem', fontWeight: '700', color: 'white' }}>
-            Welcome to Ambisec Nominees Limited
+            About Ambisec Nominees Limited
           </h1>
           <p style={{ fontSize: '1.5rem', color: 'white', maxWidth: '700px', margin: '0 auto' }}>
             Delivering outstanding corporate governance, company secretarial, and legal services across Nigeria.
