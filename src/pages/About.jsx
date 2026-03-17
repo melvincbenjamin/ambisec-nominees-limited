@@ -3,10 +3,78 @@ import { Fade, Slide } from 'react-awesome-reveal'
 import MissionImg from '../assets/Mission2.png'
 import VisionImg from '../assets/Vission2.png'
 import ValuesImg from '../assets/valuesImg.png'
+import aboutbg from "../assets/aboutbg2.jpg"; // Your background image
 
 const About = () => {
+  const cardsData = [
+    {
+      title: "Ambisec Nominees Limited",
+      text: (
+        <>
+          <strong>Ambisec Nominees Limited</strong> is a professional company
+          secretarial and corporate governance firm incorporated on
+          <strong> 18 July 2003</strong> under the laws of the Federal Republic
+          of Nigeria. The firm provides company secretarial, nominee services,
+          and corporate legal services to businesses operating within Nigeria.
+        </>
+      ),
+    },
+    {
+      title: "Headquarters & Services",
+      text: (
+        <>
+          Headquartered in <strong>Lagos, Nigeria</strong>, Ambisec Nominees
+          Limited delivers tailored corporate governance, compliance, and
+          business establishment solutions to over <strong>100 private entities</strong>
+          across diverse sectors of the Nigerian economy. Our services support both
+          foreign investors seeking entry into Nigeria and local companies requiring
+          dependable governance and regulatory compliance support.
+        </>
+      ),
+    },
+    {
+      title: "Our Approach",
+      text: (
+        <>
+          We distinguish ourselves by rejecting a one-size-fits-all approach.
+          Instead, we provide <strong>bespoke solutions</strong> aligned with
+          each client’s business objectives, regulatory environment, and risk
+          profile. Our approach combines <strong>global best practices</strong> 
+          with deep local expertise to ensure sustainable compliance,
+          operational efficiency, and long-term value.
+        </>
+      ),
+    },
+  ];
+
   return (
     <div className='bg-light text-white'>
+      {/* Hero Section with Background Image */}
+      <div
+        className="position-relative d-flex align-items-center justify-content-center"
+        style={{
+          height: '60vh',
+          backgroundImage: `url(${aboutbg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Overlay */}
+        <div
+          className="position-absolute w-100 h-100"
+          style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
+        />
+        {/* Overlay Text */}
+        <Container className="position-relative text-center">
+          <h1 style={{ fontSize: '3rem', fontWeight: '700', color: 'white' }}>
+            Welcome to Ambisec Nominees Limited
+          </h1>
+          <p style={{ fontSize: '1.5rem', color: 'white', maxWidth: '700px', margin: '0 auto' }}>
+            Delivering outstanding corporate governance, company secretarial, and legal services across Nigeria.
+          </p>
+        </Container>
+      </div>
+
       <Container className="py-5">
         {/* Page Title */}
         <Slide direction="down" triggerOnce>
@@ -19,54 +87,17 @@ const About = () => {
           </Row>
         </Slide>
 
-        {/* Company Overview Cards */}
-        <Row className="mb-5">
-          {[
-            {
-              title: "Ambisec Nominees Limited",
-              text: (
-                <>
-                  <strong>Ambisec Nominees Limited</strong> is a professional company
-                  secretarial and corporate governance firm incorporated on
-                  <strong> 18 July 2003</strong> under the laws of the Federal Republic
-                  of Nigeria. The firm provides company secretarial, nominee services,
-                  and corporate legal services to businesses operating within Nigeria.
-                </>
-              ),
-            },
-            {
-              title: "Headquarters & Services",
-              text: (
-                <>
-                  Headquartered in <strong>Lagos, Nigeria</strong>, Ambisec Nominees
-                  Limited delivers tailored corporate governance, compliance, and
-                  business establishment solutions to over <strong>100 private entities</strong>
-                  across diverse sectors of the Nigerian economy. Our services support both
-                  foreign investors seeking entry into Nigeria and local companies requiring
-                  dependable governance and regulatory compliance support.
-                </>
-              ),
-            },
-            {
-              title: "Our Approach",
-              text: (
-                <>
-                  We distinguish ourselves by rejecting a one-size-fits-all approach.
-                  Instead, we provide <strong>bespoke solutions</strong> aligned with
-                  each client’s business objectives, regulatory environment, and risk
-                  profile. Our approach combines <strong>global best practices</strong> 
-                  with deep local expertise to ensure sustainable compliance,
-                  operational efficiency, and long-term value.
-                </>
-              ),
-            },
-          ].map((card, idx) => (
-            <Col md={4} className="mb-4" key={idx}>
-              <Fade direction="up" triggerOnce delay={idx * 200}>
-                <Card className="h-100 shadow-sm text-dark">
-                  <Card.Body>
+        {/* Company Overview Cards (Equal Height) */}
+        <Row className="mb-5 g-4" style={{ alignItems: 'stretch' }}>
+          {cardsData.map((card, idx) => (
+            <Col md={4} key={idx} className="d-flex">
+              <Fade direction="up" triggerOnce delay={idx * 200} className="w-100">
+                <Card className="shadow-sm text-dark flex-fill d-flex flex-column">
+                  <Card.Body className="d-flex flex-column">
                     <Card.Title className="fw-bold mb-3">{card.title}</Card.Title>
-                    <Card.Text style={{ fontSize: '1.1rem' }}>{card.text}</Card.Text>
+                    <Card.Text style={{ fontSize: '1.1rem' }} className="flex-grow-1">
+                      {card.text}
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Fade>

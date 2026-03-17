@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
+import logo from "../assets/logo.png"
 
 function Navbars() {
   const [expanded, setExpanded] = useState(false)
@@ -24,13 +25,18 @@ function Navbars() {
     >
       <Container>
         <Navbar.Brand
-          as={Link}
-          to="/"
-          onClick={() => setExpanded(false)}
-          className="fw-bold"
-        >
-          Ambisec Nominees Limited
-        </Navbar.Brand>
+  as={Link}
+  to="/"
+  onClick={() => setExpanded(false)}
+  className="d-flex align-items-center gap-2"
+>
+  <img
+    src={logo}
+    alt="Ambisec Logo"
+    style={{ height: '40px' }}
+  />
+  <span className="fw-bold text-white">Ambisec Nominees</span>
+</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
 
