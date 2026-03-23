@@ -35,10 +35,9 @@ const Footer = () => {
             <p className="mb-1">odiliokechukwu@yahoo.com</p>
           </Col>
           <div className="mt-2 text-end">
-              <a href="#" className="text-white me-3"><FaFacebook size={20} /></a>
-              <a href="#" className="text-white me-3"><FaTwitter size={20} /></a>
-              <a href="#" className="text-white me-3"><FaLinkedin size={20} /></a>
-              <a href="#" className="text-white"><FaInstagram size={20} /></a>
+              <a href="https://web.facebook.com/odiliokechukwuandco" className="text-white me-3"><FaFacebook size={20} /></a>
+              <a href="https://www.linkedin.com/in/ambrose-odili-okechukwu-6b5b2a7/" className="text-white me-3"><FaLinkedin size={20} /></a>
+              <a href="https://www.instagram.com/odili_okechukwu/" className="text-white"><FaInstagram size={20} /></a>
             </div>
         </Row>
 

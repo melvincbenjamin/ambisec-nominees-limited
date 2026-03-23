@@ -1,0 +1,85 @@
+/* Navbar base */
+.custom-navbar {
+  background-color: #3e729a;
+  padding: 10px 0;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 35px;
+}
+
+.brand-text {
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Nav links (mobile first) */
+.nav-links {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.nav-item {
+  color: white !important;
+  padding: 10px;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.nav-item:hover {
+  color: #f0e68c !important;
+}
+
+/* Active link */
+.nav-item.active {
+  color: #ffd700 !important;
+}
+
+/* Base (mobile-first) → NO underline */
+.nav-item.active::after {
+  content: none;
+}
+
+/* Desktop (only show underline here) */
+@media (min-width: 992px) {
+  .nav-item.active {
+    position: relative;
+  }
+
+  .nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ffd700;
+    border-radius: 2px;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 992px) {
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .nav-item {
+    padding: 8px 0;
+  }
+}

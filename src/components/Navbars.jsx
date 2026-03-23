@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'
 import logo from "../assets/logo.png"
+import "../Navbar.css"
 
 function Navbars() {
   const [expanded, setExpanded] = useState(false)
-  const location = useLocation() // to track current route
+  const location = useLocation()
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -14,68 +15,48 @@ function Navbars() {
     { name: 'Contact', path: '/contact' },
   ]
 
+  const handleToggle = () => setExpanded(!expanded)
+  const handleClose = () => setExpanded(false)
+
   return (
     <Navbar
       expand="lg"
       expanded={expanded}
-      onToggle={() => setExpanded(!expanded)}
+      onToggle={handleToggle}
       fixed="top"
-      style={{ backgroundColor: '#3e729a' }}
+      className="custom-navbar"
       variant="dark"
     >
       <Container>
         <Navbar.Brand
-  as={Link}
-  to="/"
-  onClick={() => setExpanded(false)}
-  className="d-flex align-items-center gap-2"
->
-  <img
-    src={logo}
-    alt="Ambisec Logo"
-    style={{ height: '40px' }}
-  />
-  <span className="fw-bold text-white">Ambisec Nominees</span>
-</Navbar.Brand>
+          as={Link}
+          to="/"
+          onClick={handleClose}
+          className="brand"
+        >
+          <img src={logo} alt="Logo" className="brand-logo" />
+          <span className="brand-text">Ambisec Nominees</span>
+        </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
+        <Navbar.Toggle aria-controls="main-navbar" />
 
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            {navLinks.map((link) => (
-              <Nav.Link
-                as={Link}
-                to={link.path}
-                key={link.name}
-                onClick={() => setExpanded(false)}
-                style={{
-                  position: 'relative',
-                  transition: 'color 0.3s',
-                  color: location.pathname === link.path ? '#ffd700' : 'white', // active link color
-                }}
-                onMouseEnter={(e) => e.target.style.color = '#f0e68c'} // hover color
-                onMouseLeave={(e) =>
-                  e.target.style.color =
-                    location.pathname === link.path ? '#ffd700' : 'white'
-                }
-              >
-                {link.name}
-                {location.pathname === link.path && (
-                  <span
-                    style={{
-                      position: 'absolute',
-                      bottom: '-5px',
-                      left: '0',
-                      width: '100%',
-                      maxWidth: '40px',
-                      height: '3px',
-                      backgroundColor: '#ffd700',
-                      borderRadius: '2px',
-                    }}
-                  />
-                )}
-              </Nav.Link>
-            ))}
+        <Navbar.Collapse id="main-navbar">
+          <Nav className="ms-auto nav-links">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path
+
+              return (
+                <Nav.Link
+                  as={Link}
+                  to={link.path}
+                  key={link.name}
+                  onClick={handleClose}
+                  className={`nav-item ${isActive ? 'active' : ''}`}
+                >
+                  {link.name}
+                </Nav.Link>
+              )
+            })}
           </Nav>
         </Navbar.Collapse>
       </Container>

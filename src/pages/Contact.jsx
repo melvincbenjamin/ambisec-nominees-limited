@@ -3,7 +3,6 @@ import { Fade, Slide } from "react-awesome-reveal";
 import contactcall from "../assets/contactcall.jpg";
 import {
   FaFacebook,
-  FaTwitter,
   FaLinkedin,
   FaInstagram,
   FaMapMarkerAlt,
@@ -58,7 +57,7 @@ const Contact = () => {
                   <h6 className="fw-bold mb-3">Follow Us</h6>
 
                   <a
-                    href="https://facebook.com"
+                    href="https://web.facebook.com/odiliokechukwuandco"
                     target="_blank"
                     rel="noreferrer"
                     className="me-3 text-dark"
@@ -67,7 +66,7 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/ambrose-odili-okechukwu-6b5b2a7/"
                     target="_blank"
                     rel="noreferrer"
                     className="me-3 text-dark"
@@ -76,7 +75,7 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/odili_okechukwu/"
                     target="_blank"
                     rel="noreferrer"
                     className="me-3 text-dark"
