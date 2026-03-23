@@ -1,4 +1,5 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Helmet } from "react-helmet-async";
+import { Container, Row, Col } from "react-bootstrap";
 import { Fade, Slide } from "react-awesome-reveal";
 import contactcall from "../assets/contactcall.jpg";
 import {
@@ -12,34 +13,74 @@ import {
 
 const Contact = () => {
   return (
-    <Container className="py-5">
-      {/* Page Title */}
-      <Slide direction="down" triggerOnce>
-        <h2
-          className="pt-4 fw-bold text-center mb-5"
-          style={{ color: "#3e729a", fontSize: "2.5rem" }}
-        >
-          Contact Us
-        </h2>
-      </Slide>
+    <>
+      {/* SEO META TAGS */}
+      <Helmet>
+        <title>Ambisec Nominees Limited | Corporate Governance & Compliance Nigeria</title>
+        <meta
+          name="description"
+          content="Ambisec Nominees Limited provides corporate secretarial services, business incorporation, and corporate governance advisory in Nigeria."
+        />
+        <meta
+          name="keywords"
+          content="corporate governance Nigeria, company secretarial services, CAC registration, business compliance Nigeria, Ambisec Nominees"
+        />
+        <meta name="author" content="Ambisec Nominees Limited" />
 
-      <Row className="g-4 align-items-stretch">
-        {/* Contact Info */}
-        <Col lg={6}>
-          <Fade direction="left" triggerOnce>
-            <Card className="shadow-sm border-0 h-100">
-              <Card.Body>
-                <Card.Title
-                  className="fw-bold mb-4"
-                  style={{ color: "#3e729a" }}
-                >
+        {/* Open Graph (for social sharing) */}
+        <meta property="og:title" content="Ambisec Nominees Limited" />
+        <meta
+          property="og:description"
+          content="Corporate secretarial and governance experts in Nigeria."
+        />
+        <meta property="og:image" content="" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      {/* HERO SECTION */}
+      <section
+        className="position-relative d-flex align-items-center justify-content-center text-center"
+        style={{
+          backgroundImage: `url(${contactcall})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "50vh",
+          marginTop: "60px",
+        }}
+      >
+        <div
+          className="position-absolute top-0 start-0 w-100 h-100"
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        />
+
+        <div className="position-relative text-white px-3">
+          <Slide direction="down" triggerOnce>
+            <h1 className="fw-bold">Contact Us</h1>
+          </Slide>
+
+          <Fade delay={200} triggerOnce>
+            <p className="mx-auto" style={{ maxWidth: "500px" }}>
+              Our team is always available to provide support and guidance for your business needs.
+            </p>
+          </Fade>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <Container className="py-5">
+        <Row className="g-4">
+          
+          {/* Contact Info */}
+          <Col xs={12} lg={5}>
+            <Fade direction="left" triggerOnce>
+              <div>
+                <h3 className="fw-bold mb-3" style={{ color: "#3e729a" }}>
                   Get in Touch
-                </Card.Title>
+                </h3>
 
                 <p>
                   <FaMapMarkerAlt className="me-2 text-primary" />
-                  40 Shipeolu Street, Off Ikorodu Road,
-                  Palm Grove, Lagos, Nigeria
+                  40 Shipeolu Street, Off Ikorodu Road, Palm Grove, Lagos, Nigeria
                 </p>
 
                 <p>
@@ -52,76 +93,51 @@ const Contact = () => {
                   odiliokechukwu@yahoo.com
                 </p>
 
-                {/* Social Media */}
                 <div className="mt-4">
                   <h6 className="fw-bold mb-3">Follow Us</h6>
 
-                  <a
-                    href="https://web.facebook.com/odiliokechukwuandco"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="me-3 text-dark"
-                  >
-                    <FaFacebook size={22} />
+                  <a href="#" className="me-3 text-dark">
+                    <FaFacebook size={20} />
                   </a>
 
-                  <a
-                    href="https://www.linkedin.com/in/ambrose-odili-okechukwu-6b5b2a7/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="me-3 text-dark"
-                  >
-                    <FaLinkedin size={22} />
+                  <a href="#" className="me-3 text-dark">
+                    <FaLinkedin size={20} />
                   </a>
 
-                  <a
-                    href="https://www.instagram.com/odili_okechukwu/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="me-3 text-dark"
-                  >
-                    <FaInstagram size={22} />
+                  <a href="#" className="me-3 text-dark">
+                    <FaInstagram size={20} />
                   </a>
 
-                  {/* Gmail Link */}
-                  <a
-                    href="mailto:odiliokechukwu@yahoo.com"
-                    className="text-dark"
-                  >
-                    <FaEnvelope size={22} />
+                  <a href="mailto:odiliokechukwu@yahoo.com" className="text-dark">
+                    <FaEnvelope size={20} />
                   </a>
                 </div>
+              </div>
+            </Fade>
+          </Col>
 
-                {/* Google Map */}
-                <div className="mt-4" style={{ height: "250px" }}>
-                  <iframe
-                    title="Office Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.196597578157!2d3.394097275641783!3d6.607091395261538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf6f7db2f5c47%3A0x7d9a7a8cb5f9f8c8!2s40%20Shipeolu%20Street%2C%20Ikorodu%20Road%2C%20Palm%20Grove%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1696909623074!5m2!1sen!2sng"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                  ></iframe>
-                </div>
-              </Card.Body>
-            </Card>
-          </Fade>
-        </Col>
+          {/* Map */}
+          <Col xs={12} lg={7}>
+            <Fade direction="right" triggerOnce>
+              <div
+                className="rounded overflow-hidden shadow-sm w-100"
+                style={{ height: "300px" }}
+              >
+                <iframe
+                  title="Office Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18..."
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                />
+              </div>
+            </Fade>
+          </Col>
 
-        {/* Image Section */}
-        <Col lg={6}>
-          <Fade direction="right" triggerOnce>
-            <img
-              src={contactcall}
-              alt="Receptionist on call"
-              className="img-fluid rounded shadow-sm w-100 h-100"
-              style={{ objectFit: "cover", minHeight: "100%" }}
-            />
-          </Fade>
-        </Col>
-      </Row>
-    </Container>
+        </Row>
+      </Container>
+    </>
   );
 };
 

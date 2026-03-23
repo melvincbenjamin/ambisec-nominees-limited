@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Container, Row, Col, Card, Image } from 'react-bootstrap'
 import { Fade, Slide, Zoom } from 'react-awesome-reveal'
 
@@ -37,6 +38,29 @@ const Board = () => {
   return (
     <div>
 
+      {/* SEO META TAGS */}
+      <Helmet>
+        <title>Ambisec Nominees Limited | Corporate Governance & Compliance Nigeria</title>
+        <meta
+          name="description"
+          content="Ambisec Nominees Limited provides corporate secretarial services, business incorporation, and corporate governance advisory in Nigeria."
+        />
+        <meta
+          name="keywords"
+          content="corporate governance Nigeria, company secretarial services, CAC registration, business compliance Nigeria, Ambisec Nominees"
+        />
+        <meta name="author" content="Ambisec Nominees Limited" />
+
+        {/* Open Graph (for social sharing) */}
+        <meta property="og:title" content="Ambisec Nominees Limited" />
+        <meta
+          property="og:description"
+          content="Corporate secretarial and governance experts in Nigeria."
+        />
+        <meta property="og:image" content="" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       {/* Hero Section */}
       <div
         style={{
