@@ -9,22 +9,22 @@ import Roseline from "../assets/Roseline.jpeg"
 
 const boardMembers = [
   {
-    name: "Mr. Ambrose Odili Okechukwu - MSC, FCA, FCTI, ABR",
+    name: "Mr. Ambrose Odili Okechukwu - M.Sc., FCA, FCTI, ABR",
     position: "Chairman",
     image: Odili2
   },
   {
-    name: "Barrister Mrs. Nwamaka Odili, PhD, BL, LLM",
+    name: "Barrister Mrs. Nwamaka Odili - PhD, BL, LLM",
     position: "Managing Director",
     image: MrsOdili
   },
   {
-    name: "Mr. Victor Odili, MSC",
+    name: "Mr. Victor Odili - M.Sc.",
     position: "Director",
     image: OdiliVictor
   },
   {
-    name: "Miss Roseline Ohimai",
+    name: "Miss Roseline Ohimai - B.Sc.",
     position: "Head of Operations",
     image: Roseline   
   },
