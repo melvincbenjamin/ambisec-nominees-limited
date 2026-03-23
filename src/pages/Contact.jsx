@@ -124,13 +124,14 @@ const Contact = () => {
                 style={{ height: "300px" }}
               >
                 <iframe
-                  title="Office Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18..."
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                />
+  title="Office Location"
+  src="https://www.google.com/maps?q=40+Shipeolu+Street,+Off+Ikorodu+Road,+Palm+Grove,+Lagos,+Nigeria&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+/>
               </div>
             </Fade>
           </Col>
