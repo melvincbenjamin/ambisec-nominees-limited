@@ -31,8 +31,8 @@ const Footer = () => {
           <Col md={4} className="mb-3">
             <h5 className="fw-bold">Contact Us</h5>
             <p className="mb-1">40, Shipeolu Street, Palm Groove, Lagos, Nigeria</p>
-            <p className="mb-1">+234 803 304 8836</p>
-            <p className="mb-1">info@ambisecnominees.com</p>
+            <p className="mb-1">+234 8033048836</p>
+            <p className="mb-1">odiliokechukwu@yahoo.com</p>
           </Col>
           <div className="mt-2 text-end">
               <a href="#" className="text-white me-3"><FaFacebook size={20} /></a>

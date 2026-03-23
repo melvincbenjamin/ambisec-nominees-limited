@@ -50,7 +50,7 @@ const Contact = () => {
 
                 <p>
                   <FaEnvelope className="me-2 text-primary" />
-                  info@yourcompany.com
+                  odiliokechukwu@yahoo.com
                 </p>
 
                 {/* Social Media */}
@@ -64,15 +64,6 @@ const Contact = () => {
                     className="me-3 text-dark"
                   >
                     <FaFacebook size={22} />
-                  </a>
-
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="me-3 text-dark"
-                  >
-                    <FaTwitter size={22} />
                   </a>
 
                   <a
@@ -95,7 +86,7 @@ const Contact = () => {
 
                   {/* Gmail Link */}
                   <a
-                    href="mailto:info@yourcompany.com"
+                    href="mailto:odiliokechukwu@yahoo.com"
                     className="text-dark"
                   >
                     <FaEnvelope size={22} />
