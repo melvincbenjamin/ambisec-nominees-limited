@@ -90,8 +90,7 @@ const Home = () => {
               </Slide>
               <Fade cascade damping={0.3} triggerOnce>
                 <p className="lead">
-                  Ambisec Nominees Limited is a professional company secretarial and corporate governance firm
-                  incorporated on 18 July 2003 under the laws of the Federal Republic of Nigeria.
+                   Ambisec Nominees Limited is a company in Nigeria that provides company secretarial and corporate governance services. It was officially established on July 18, 2003, in accordance with Nigerian law.
                 </p>
               </Fade>
             </Container>
