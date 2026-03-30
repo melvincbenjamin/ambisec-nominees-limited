@@ -3,6 +3,7 @@ import Navbars from './components/Navbars'
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Board from './pages/Board';
+import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import Footer from './components/Footer'
 import WhatsappButton from './components/WhatsappButton';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/board" element={<Board />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
